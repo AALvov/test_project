@@ -22,10 +22,10 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('authors', \App\Http\Controllers\AuthorController::class);
     Route::resource('books', \App\Http\Controllers\BookController::class);
 
-//    Route::get('/', function () {
-//        return view('welcome');
-//    })->name(
-//        'home'
-//    );
+    Route::get('/', function () {
+        return redirect('/login');
+    })->name(
+        'home'
+    );
 });
 

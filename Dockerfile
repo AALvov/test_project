@@ -25,7 +25,4 @@ RUN chown -R www-data:www-data /var/www/html/storage
 RUN chmod -R 775 /var/www/html/storage
 
 # Запуск веб-сервера PHP
-RUN php artisan optimize  \
-    && php artisan key:generate
-CMD php artisan storage:link
-CMD php artisan serve --host=0.0.0.0 --port=8000
+CMD php artisan optimize && php artisan storage:link && php artisan migrate --seed && php artisan serve --host=0.0.0.0 --port=8000
