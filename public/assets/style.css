@@ -1,0 +1,148 @@
+/*Блок главного контента*/
+.content {
+    width: 88%;
+    margin: 0 auto;
+    background: #F2F2F2;
+}
+
+/*Блок header*/
+
+.header_line {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 55px;
+    background: rgb(0, 121, 194);
+    color: white;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.header_cell {
+    display: inline-block;
+    position: relative;
+    margin: 18px 25px 0 2px;
+}
+
+.header_cell:hover {
+    margin: 16px 23px 0 0;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.header_cell a {
+    padding: 0 3px;
+    color: white;
+    margin: 0;
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background: #F2F2F2;
+}
+
+#header_doc {
+    padding-left: 20px;
+    font-size: 1.17em;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.header_blocks {
+    display: inline-block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    margin-right: 20px;
+    float: right
+}
+
+.btn {
+    text-decoration: none;
+    color: #6b5770;
+    background-image: linear-gradient(90deg, #00BFFF, #7B68EE);
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid;
+    position: relative;
+    z-index: 0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 5px 20px 0;
+    outline: none;
+    cursor: pointer;
+    user-select: none;
+    appearance: none;
+    touch-action: manipulation;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background: linear-gradient(90deg, #00BFFF, #7B68EE);
+    z-index: -2;
+    transition: .8s;
+    border-radius: 5px;
+}
+
+.btn:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #fff, #fff);
+    z-index: -1;
+    transition: .4s;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    color: #fff;
+    transition: .3s;
+}
+
+.btn:hover:after {
+    background: linear-gradient(90deg, #00BFFF, #7B68EE);
+}
+
+.btn:active:after {
+    background: linear-gradient(90deg, #00BFFF, #7B68EE);
+}
+
+.btn:focus-visible {
+    box-shadow: 0 0 0 3px #fd7f34;
+}
+
+.btn:disabled {
+    pointer-events: none;
+}
+
+.btn:disabled:before {
+    filter: grayscale(100%);
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    text-align: center;
+    padding: 5px;
+}
